@@ -1,0 +1,300 @@
+       }<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LES SALE FILS DE BUZZ - Signalement</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0a;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #000000 0%, #1a4d3a 100%);
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 3px solid #00cc66;
+            box-shadow: 0 4px 20px rgba(0, 204, 102, 0.2);
+        }
+
+        .header h1 {
+            color: #00cc66;
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 0;
+            letter-spacing: 2px;
+            text-shadow: 0 0 20px rgba(0, 204, 102, 0.5);
+            animation: headerGlow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes headerGlow {
+            from { text-shadow: 0 0 20px rgba(0, 204, 102, 0.5); }
+            to { text-shadow: 0 0 30px rgba(0, 204, 102, 0.8), 0 0 40px rgba(0, 204, 102, 0.3); }
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .creator-section {
+            background: rgba(0, 204, 102, 0.1);
+            border: 2px solid #00cc66;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .creator-section h2 {
+            color: #00cc66;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .kick-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin: 25px 0;
+            flex-wrap: wrap;
+        }
+
+        .kick-button {
+            background: linear-gradient(135deg, #53fc18 0%, #00cc66 100%);
+            color: #000000;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(83, 252, 24, 0.3);
+        }
+
+        .kick-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(83, 252, 24, 0.4);
+        }
+
+        .violators-section {
+            background: rgba(255, 0, 0, 0.1);
+            border: 2px solid #ff4444;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+
+        .violators-section h2 {
+            color: #ff4444;
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .violator-item {
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid #ff6666;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .violator-item:hover {
+            background: rgba(255, 68, 68, 0.1);
+            transform: translateX(5px);
+        }
+
+        .violator-info h3 {
+            color: #ff6666;
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+
+        .violator-info p {
+            color: #cccccc;
+            font-size: 0.95rem;
+        }
+
+        .violator-link {
+            background: #ff4444;
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .violator-link:hover {
+            background: #ff2222;
+            transform: scale(1.05);
+        }
+
+        .action-section {
+            background: rgba(0, 204, 102, 0.1);
+            border: 2px solid #00cc66;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .action-section h2 {
+            color: #00cc66;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .action-button {
+            background: #00cc66;
+            color: #000000;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 10px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .action-button:hover {
+            background: #00aa55;
+            transform: translateY(-2px);
+        }
+
+        .footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+            border-top: 1px solid #333;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .violator-item {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+            
+            .kick-section {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>LES SALE FILS DE BUZZ</h1>
+    </div>
+
+    <div class="container">
+        <div class="creator-section">
+            <h2>Créateur Original</h2>
+            <p><strong>AHMEDLNDY</strong> - Le vrai créateur de contenu</p>
+            
+            <div class="kick-section">
+                <a href="https://kick.com/ahmedlndy" target="_blank" class="kick-button">
+                    REGARDER SUR KICK
+                </a>
+            </div>
+        </div>
+
+        <div class="violators-section">
+            <h2>🚨 COMPTES VOLEURS 🚨</h2>
+            
+            <div class="violator-item">
+                <div class="violator-info">
+                    <h3>@vridique32</h3>
+                    <p>Vole le contenu d'ahmedlndy</p>
+                </div>
+                <a href="https://www.tiktok.com/@vridique32" target="_blank" class="violator-link">
+                    VOIR LE COMPTE
+                </a>
+            </div>
+
+            <div class="violator-item">
+                <div class="violator-info">
+                    <h3>@oustazxavier84</h3>
+                    <p>Vole le contenu d'ahmedlndy</p>
+                </div>
+                <a href="https://www.tiktok.com/@oustazxavier84" target="_blank" class="violator-link">
+                    VOIR LE COMPTE
+                </a>
+            </div>
+
+            <div class="violator-item">
+                <div class="violator-info">
+                    <h3>@iran_vs_israel3</h3>
+                    <p>Vole le contenu d'ahmedlndy</p>
+                </div>
+                <a href="https://www.tiktok.com/@iran_vs_israel3" target="_blank" class="violator-link">
+                    VOIR LE COMPTE
+                </a>
+            </div>
+        </div>
+
+        <div class="action-section">
+            <h2>AGIR MAINTENANT</h2>
+            <p>Signale ces comptes pour protéger le créateur original</p>
+            
+            <button class="action-button" onclick="alert('Va sur les comptes TikTok et utilise la fonction de signalement')">
+                COMMENT SIGNALER
+            </button>
+            
+            <a href="https://kick.com/ahmedlndy" target="_blank" class="action-button">
+                SOUTENIR AHMED
+            </a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Signalons les flis de buzz est respectons les VRAI créateur</p>
+        <p><strong>LES SALE FILS DE BUZZ</strong></p>
+    </div>
+
+    <script>
+        // Animation simple à l'ouverture
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.creator-section, .violators-section, .action-section');
+            
+            sections.forEach((section, index) => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    section.style.transition = 'all 0.5s ease';
+                    section.style.opacity = '1';
+                    section.style.transform = 'translateY(0)';
+                }, index * 200);
+            });
+        });
+    </script>
+</body>
+</html>
