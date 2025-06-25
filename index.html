@@ -1,4 +1,4 @@
-       }<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -19,26 +19,18 @@
         }
 
         .header {
-            background: linear-gradient(135deg, #000000 0%, #1a4d3a 100%);
-            padding: 60px 20px;
+            background: #000000;
+            padding: 40px 20px;
             text-align: center;
-            border-bottom: 3px solid #00cc66;
-            box-shadow: 0 4px 20px rgba(0, 204, 102, 0.2);
+            border-bottom: 2px solid #00cc66;
         }
 
         .header h1 {
             color: #00cc66;
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 0;
-            letter-spacing: 2px;
-            text-shadow: 0 0 20px rgba(0, 204, 102, 0.5);
-            animation: headerGlow 3s ease-in-out infinite alternate;
-        }
-
-        @keyframes headerGlow {
-            from { text-shadow: 0 0 20px rgba(0, 204, 102, 0.5); }
-            to { text-shadow: 0 0 30px rgba(0, 204, 102, 0.8), 0 0 40px rgba(0, 204, 102, 0.3); }
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0;
+            letter-spacing: 1px;
         }
 
         .container {
@@ -90,6 +82,12 @@
         .kick-button:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(83, 252, 24, 0.4);
+        }
+
+        .kick-logo {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
         }
 
         .violators-section {
@@ -148,6 +146,31 @@
         .violator-link:hover {
             background: #ff2222;
             transform: scale(1.05);
+        }
+
+        .whitelist-section {
+            background: rgba(0, 204, 102, 0.1);
+            border: 2px solid #00cc66;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+
+        .whitelist-section h2 {
+            color: #00cc66;
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .whitelist-info {
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid #00cc66;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            color: #cccccc;
+            line-height: 1.6;
         }
 
         .action-section {
@@ -232,7 +255,7 @@
             <div class="violator-item">
                 <div class="violator-info">
                     <h3>@vridique32</h3>
-                    <p>Vole le contenu d'ahmedlndy</p>
+                    <p>Vole le contenu d'ahmedlndy - <strong>TikTok</strong></p>
                 </div>
                 <a href="https://www.tiktok.com/@vridique32" target="_blank" class="violator-link">
                     VOIR LE COMPTE
@@ -242,7 +265,7 @@
             <div class="violator-item">
                 <div class="violator-info">
                     <h3>@oustazxavier84</h3>
-                    <p>Vole le contenu d'ahmedlndy</p>
+                    <p>Vole le contenu d'ahmedlndy - <strong>TikTok</strong></p>
                 </div>
                 <a href="https://www.tiktok.com/@oustazxavier84" target="_blank" class="violator-link">
                     VOIR LE COMPTE
@@ -252,7 +275,7 @@
             <div class="violator-item">
                 <div class="violator-info">
                     <h3>@iran_vs_israel3</h3>
-                    <p>Vole le contenu d'ahmedlndy</p>
+                    <p>Vole le contenu d'ahmedlndy - <strong>TikTok</strong></p>
                 </div>
                 <a href="https://www.tiktok.com/@iran_vs_israel3" target="_blank" class="violator-link">
                     VOIR LE COMPTE
@@ -262,11 +285,28 @@
             <div class="violator-item">
                 <div class="violator-info">
                     <h3>@mlcgt1970</h3>
-                    <p>Vole le contenu d'ahmedlndy</p>
+                    <p>Vole le contenu d'ahmedlndy - <strong>Instagram</strong></p>
                 </div>
                 <a href="https://www.instagram.com/mlcgt1970/" target="_blank" class="violator-link">
                     VOIR LE COMPTE
                 </a>
+            </div>
+
+            <div class="violator-item">
+                <div class="violator-info">
+                    <h3>@papesidy75</h3>
+                    <p>Vole le contenu d'ahmedlndy - <strong>TikTok</strong></p>
+                </div>
+                <a href="https://www.tiktok.com/@papesidy75" target="_blank" class="violator-link">
+                    VOIR LE COMPTE
+                </a>
+            </div>
+        </div>
+
+        <div class="whitelist-section">
+            <h2>✅ COMPTES WHITELIST ✅</h2>
+            <div class="whitelist-info">
+                <p>Aucun compte n'a était whitelist si vous souhaitée partagée le contenu de ahmed légalment envoyée lui un DM sur insta ou un message sur kick en lui demandant les autorisation</p>
             </div>
         </div>
 
@@ -292,7 +332,7 @@
     <script>
         // Animation simple à l'ouverture
         document.addEventListener('DOMContentLoaded', function() {
-            const sections = document.querySelectorAll('.creator-section, .violators-section, .action-section');
+            const sections = document.querySelectorAll('.creator-section, .violators-section, .whitelist-section, .action-section');
             
             sections.forEach((section, index) => {
                 section.style.opacity = '0';
